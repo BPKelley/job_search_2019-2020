@@ -12,3 +12,9 @@ There were also a few disruptions during that period (as you may recall!), which
 4. March 2020-April 2020: COVID-19 started. EVERYTHING paused for a while, since absolutely nobody knew what was happening or how it would affect the future.
 5. April 2020-May 2020: things actually picked back up *relatively* quickly (in hindsight). Continued applying and interviewing.
 6. May 14, 2020: formally **accepted an offer** from my new employer.
+
+## Site index
+
+Currently just contains two things:
+1. This current page.
+2. A [visualization of the search process](./visualization.html) (applications, interviews, rejections, etc) - presented as a [Sankey diagram]([url](https://en.wikipedia.org/wiki/Sankey_diagram)). 
