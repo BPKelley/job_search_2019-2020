@@ -2,7 +2,7 @@
 <body>
  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-<div id="sankey_multiple" style="width: 900px; height: 300px;"></div>
+<div id="sankey_multiple" style="width: 1400px; height: 600px;"></div>
 
 <script type="text/javascript">
   google.charts.load("current", {packages:["sankey"]});
@@ -13,36 +13,55 @@
     data.addColumn('string', 'To');
     data.addColumn('number', 'Weight');
     data.addRows([
-      ['Fifth interview','Ghosted',1],
-      ['Fourth interview','Fifth interview',1],
-      ['Fourth interview','Rejected',1],
-      ['Third interview','Offer',1],
-      ['Third interview','Fourth interview',2],
-      ['Third interview','Rejected',1],
-      ['Second interview','Third interview',4],
-      ['Second interview','I declined (other)',1],
-      ['Second interview','Rejected',5],
+      ['Applied','No response',37],
+      ['Applied','Rejected',30],
+      ['Applied','I declined (accepted another offer)',5],
+      ['Applied','I declined (other)',2],
+      ['Applied','Role canceled due to COVID',2],
+      ['Applied','Recruiter screen',28],
+      ['Applied','First interview',7],
+      ['Recruiter screen','Ghosted',4],
+      ['Recruiter screen','Rejected',6],
+      ['Recruiter screen','I declined (other)',3],
+      ['Recruiter screen','I declined (accepted another offer)',3],
+      ['Recruiter screen','First interview',11],
+      ['Recruiter screen','Role canceled due to COVID',1],    
       ['First interview','Second interview',10],
       ['First interview','Ghosted',2],
       ['First interview','Rejected',6],
-      ['Recruiter screen','First interview',11],
-      ['Recruiter screen','I declined (other)',3],
-      ['Recruiter screen','I declined (accepted another offer)',3],
-      ['Recruiter screen','Ghosted',4],
-      ['Recruiter screen','Rejected',6],
-      ['Recruiter screen','Role canceled due to COVID',1],
-      ['Applied','First interview',7],
-      ['Applied','Recruiter screen',28],
-      ['Applied','I declined (accepted another offer)',5],
-      ['Applied','I declined (other)',2],
-      ['Applied','No response',37],
-      ['Applied','Rejected',30],
-      ['Applied','Role canceled due to COVID',2]
+      ['Second interview','Third interview',4],
+      ['Second interview','I declined (other)',1],
+      ['Second interview','Rejected',5],
+      ['Third interview','Offer',1],
+      ['Third interview','Fourth interview',2],
+      ['Third interview','Rejected',1],
+      ['Fourth interview','Fifth interview',1],
+      ['Fourth interview','Rejected',1],     
+      ['Fifth interview','Ghosted',1]
+
     ]);
 
     // Set chart options
     var options = {
-      width: 600,
+      width: 1200,
+      sankey: { 
+        link: { 
+          colors: ['#808080', //gray - no response
+                   '#D30000', //red - rejected
+                   '#FFFF00', //yellow - I declined (accepted another offer)
+                   '#ea9999', //light red - I declined (other)
+                   '#ff00ff', //violet - Role canceled due to COVID
+                   '#a4c2f4', //light blue - Recruiter screen
+                   '#b6d7a8', //light green - first interview
+                   '#000000', //black - ghosted
+                   '#88b1f4', //light-med blue - Second interview
+                   '#689df4', //med blue - Third interview
+                   '#00ff00', //bright green - Offer
+                   '#4c8bf4', //med-dark blue - Fourth interview
+                   '#2572f4' //dark blue - Fifth interview
+                   ]
+        } 
+      }
     };
 
     // Instantiate and draw our chart, passing in some options.
