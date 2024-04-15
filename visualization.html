@@ -13,13 +13,13 @@
     data.addColumn('string', 'To');
     data.addColumn('number', 'Weight');
     data.addRows([
-      ['Applied','No response',37],
       ['Applied','Rejected',30],
       ['Applied','I declined (accepted another offer)',5],
       ['Applied','I declined (other)',2],
       ['Applied','Role canceled due to COVID',2],
       ['Applied','Recruiter screen',28],
       ['Applied','First interview',7],
+      ['Applied','No response',37],
       ['Recruiter screen','Ghosted',4],
       ['Recruiter screen','Rejected',6],
       ['Recruiter screen','I declined (other)',3],
@@ -45,14 +45,19 @@
     var options = {
       width: 1200,
       sankey: { 
+        iterations: 128,  
         link: { 
-          colors: ['#808080', //gray - no response
+          colorMode: 'target'
+        }, 
+        node: {
+           colors: [
                    '#D30000', //red - rejected
                    '#FFFF00', //yellow - I declined (accepted another offer)
                    '#ea9999', //light red - I declined (other)
                    '#ff00ff', //violet - Role canceled due to COVID
                    '#a4c2f4', //light blue - Recruiter screen
                    '#b6d7a8', //light green - first interview
+                   '#808080', //gray - no response
                    '#000000', //black - ghosted
                    '#88b1f4', //light-med blue - Second interview
                    '#689df4', //med blue - Third interview
@@ -60,7 +65,7 @@
                    '#4c8bf4', //med-dark blue - Fourth interview
                    '#2572f4' //dark blue - Fifth interview
                    ]
-        } 
+        }
       }
     };
 
