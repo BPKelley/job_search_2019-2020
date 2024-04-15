@@ -17,4 +17,4 @@ There were also a few disruptions during that period (as you may recall!), which
 
 Currently just contains two things:
 1. This current page.
-2. A [visualization of the search process](./visualization.html) (applications, interviews, rejections, etc) - presented as a [Sankey diagram]([url](https://en.wikipedia.org/wiki/Sankey_diagram)). 
+2. A [visualization of the search process](https://bpkelley.github.io/job_search_2019-2020/visualization.html) (applications, interviews, rejections, etc) - presented as a [Sankey diagram]([url](https://en.wikipedia.org/wiki/Sankey_diagram)). 
