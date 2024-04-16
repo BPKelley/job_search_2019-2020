@@ -13,9 +13,8 @@
     data.addColumn('string', 'To');
     data.addColumn('number', 'Weight');
     data.addRows([
-      ['Applied','Rejected',30,'color:red'],         //Node 01="Applied"
-                                                     //Node 02="Rejected"
-      ['Applied','I declined (accepted another offer)',5,'color:yellow'],   //Node 03="I declined (accepted another..."
+      ['Applied','Rejected',30],                     //Node 01="Applied" -- Node 02="Rejected"
+      ['Applied','I declined (accepted another offer)',5],   //Node 03="I declined (accepted another..."
       ['Applied','I declined (other)',2],            //Node 04="I decline (other)"
       ['Applied','Role canceled due to COVID',2],    //Node 05="Role canceled due to COVID"
       ['Applied','Recruiter screen',28],             //Node 06="Recruiter Screen"
@@ -51,8 +50,7 @@
           colorMode: 'target'
         }, 
         node: {
-          nodePadding: 40
-          /*
+          nodePadding: 40,
           colors: [
                    '#D30000', //red - rejected
                    '#FFFF00', //yellow - I declined (accepted another offer)
@@ -68,7 +66,6 @@
                    '#4c8bf4', //med-dark blue - Fourth interview
                    '#2572f4' //dark blue - Fifth interview
                    ]
-             */
         }
       }
     };
