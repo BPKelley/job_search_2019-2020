@@ -20,18 +20,18 @@
       ['Applied','I declined (other)',2],            //Node 04="I decline (other)"
       ['Applied','Role canceled due to COVID',2],    //Node 05="Role canceled due to COVID"
       ['Applied','No response',37],                  //Node 08="No response"
-      ['Recruiter screen','Ghosted',4],              //Node 09="Ghosted"
-      ['Recruiter screen','Rejected',6],             // re-used node 02
-      ['Recruiter screen','I declined (other)',3],   // re-used node 04
-      ['Recruiter screen','I declined (accepted another offer)',3],   // re-used node 03
       ['Recruiter screen','First interview',11],     // re-used node 07
+      ['Recruiter screen','Rejected',6],             // re-used node 02
+      ['Recruiter screen','Ghosted',4],              //Node 09="Ghosted"
+      ['Recruiter screen','I declined (accepted another offer)',3],   // re-used node 03
+      ['Recruiter screen','I declined (other)',3],   // re-used node 04
       ['Recruiter screen','Role canceled due to COVID',1],  // re-used node 05
       ['First interview','Second interview',10],     //Node 10="Second Interview"
-      ['First interview','Ghosted',2],               // re-used node 09
       ['First interview','Rejected',6],              // re-used node 02
+      ['First interview','Ghosted',2],               // re-used node 09
       ['Second interview','Third interview',4],      //Node 11="Third Interview"
-      ['Second interview','I declined (other)',1],   // re-used node 04
-      ['Second interview','Rejected',5],             // re-used node 02
+      ['Second interview','Rejected',5],             // re-used x
+      ['Second interview','I declined (other)',1],   // re-used x
       ['Third interview','Offer',1],                 //Node 12="Offer"
       ['Third interview','Fourth interview',2],      //Node 13="Fourth Interview"
       ['Third interview','Rejected',1],              // re-used node 02
@@ -45,10 +45,11 @@
     var options = {
       width: 1200,
       sankey: { 
-        iterations: 128,  
-        link: { 
+        iterations: 256,  
+        /*link: { 
           colorMode: 'target'
         }, 
+        */
         node: {
           nodePadding: 40
            /*
